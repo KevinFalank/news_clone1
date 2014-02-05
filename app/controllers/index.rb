@@ -4,13 +4,20 @@ get '/' do
 end
 
 get '/posts/new' do
-  erb :new_post
+  if session[:user_id].nil?
+    redirect '/user/login'
+  else
+    erb :new_post
+  end
 end
 
-# post '/posts/new' do
-#   @post = params[:post]
-
-# end
+post '/posts/new' do
+  post = params[:post]
+  p params
+  new_post = Post.create(title: post["title"], url: post["url"], user_id: session[:user_id])
+  p new_post
+  redirect '/'
+end
 
 get '/posts/:post_id' do
 
