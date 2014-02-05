@@ -8,3 +8,19 @@ post '/users/new' do
   session[:user_id] = new_user.id
   redirect '/'
 end
+
+
+
+get '/users/:user_id/comments' do
+
+end
+
+get '/users/:user_id/posts' do
+  @posts = Post.where("user_id = ?", params[:user_id])
+  erb :posts
+end
+
+get '/users/:user_id' do
+  @user = User.find(params[:user_id])
+  erb :user
+end
