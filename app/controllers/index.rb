@@ -5,7 +5,7 @@ end
 
 get '/posts/new' do
   if session[:user_id].nil?
-    redirect '/user/login'
+    redirect '/users/signin'
   else
     erb :new_post
   end

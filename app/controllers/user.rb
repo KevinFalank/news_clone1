@@ -6,6 +6,11 @@ get '/users/new' do
   erb :new_user
 end
 
+get '/users/logout' do
+  session.clear
+  redirect '/'
+end
+
 post '/users/signin' do
   @email = params[:email]
   @password = params[:password]
