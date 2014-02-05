@@ -41,3 +41,5 @@ Implement all the views. Don't worry about AJAX at first.
 ![](README-imgs/wireframe.png)
 2. Schema. Done
 ![](README-imgs/schema.jpg)
+3.  Added validations
+4. Added associations
