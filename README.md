@@ -37,4 +37,5 @@ Implement all the views. Don't worry about AJAX at first.
 
 #Procedure
 
-1. Wireframing.
+1. [Wireframing.  Done](README-imgs/wireframe.png)
+2. [Schema. Done.](README-imgs/schema.png)
