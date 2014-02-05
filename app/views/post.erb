@@ -1,0 +1,10 @@
+<div class="container">
+<h1><%= @post.title %></h1>
+<h3><%= @post.url %></h3>
+<h4><%= @user.name %></h4>
+<ul>
+  <% @comments.each do |comment| %>
+    <li><%= comment.text %></li>
+  <% end %>
+</ul>
+</div>

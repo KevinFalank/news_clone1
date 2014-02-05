@@ -2,7 +2,7 @@
   <h1>Hacker News Clone 1</h1>
   <ul>
     <% @posts.each do |post| %>
-      <li><a href="<%= post.url %>"><%= post.title %></a> (<%= post.url %>) </li>
+      <li><a href="<%= post.url %>"><%= post.title %></a> (<%= post.url %>) - <a href="#"><%= post.comments.count%></a> Comments</li>
       <!-- TODO add comment count for each post -->
     <% end %>
   </ul>
