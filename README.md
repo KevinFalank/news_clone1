@@ -32,3 +32,9 @@ threads. Just sort them in some simple way: chronologically, alphabetically, etc
 
 ###Views
 Implement all the views. Don't worry about AJAX at first.
+
+-------------
+
+#Procedure
+
+1. Wireframing.
