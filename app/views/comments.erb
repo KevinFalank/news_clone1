@@ -1,11 +1,11 @@
 <div class="container">
   <h1>Hacker News Clone 1</h1>
-  <a href="/posts/new">Submit</a>
   <ul>
-    <% @posts.each do |post| %>
-      <li><a href="<%= post.url %>"><%= post.title %></a> (<%= post.url %>) -
-        <a href="/posts/<%=post.id%>"><%= post.comments.count%></a> Comments
-         by <a href="/users/<%= post.user.id %>"><%= post.user.name%></a>
+    <% @comments.each do |comment| %>
+      <li><a href="/users/<%= comment.user.id%>"><%= comment.user.name %></a> |
+          <a href="/users/<%= comment.post.url%>">link</a> |
+          <a href="/posts/<%= comment.post.id%>">parent</a><br/>
+          <p><%= comment.text %></p>
       </li>
     <% end %>
   </ul>
